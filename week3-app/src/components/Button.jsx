@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
 /**
  * Button component with different variants
@@ -18,7 +19,7 @@ const Button = ({
   onClick, 
   children,
   className = '',
-  ...rest 
+  ...rest
 }) => {
   // Base classes
   const baseClasses = 'inline-flex items-center justify-center font-medium rounded focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors';
@@ -47,7 +48,7 @@ const Button = ({
   
   return (
     <button
-      className={buttonClasses}
+      className={classNames(baseClasses, variantClasses[variant])}
       disabled={disabled}
       onClick={onClick}
       {...rest}
