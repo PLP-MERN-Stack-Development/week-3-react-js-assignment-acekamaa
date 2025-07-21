@@ -1,5 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { hydrateRoot } from 'react-dom/client';
+
+hydrateRoot(document.getElementById('root'), <App />);
 
 // Pages and Layout
 import Home from './pages/Home';
